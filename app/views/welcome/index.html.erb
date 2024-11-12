@@ -1,9 +1,11 @@
 <% content_for :title, "Members"%>
-<div class="w-full rounded overflow-hidden shadow-lg bg-white p-6">
+<div class="w-full rounded overflow-hidden bg-white">
   <div class="flex justify-between items-center mb-2">
-    <div class="text-xl font-bold text-gray-900">
-      Members List
-    </div>
+    <% if !turbo_native_app?%>
+      <div class="text-xl font-bold text-gray-900">
+        Members List
+      </div>
+    <% end %>
     <a href="<%=members_new_path%>" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 px-3 rounded">
       New Member
     </a>

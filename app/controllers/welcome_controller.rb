@@ -12,6 +12,10 @@ class WelcomeController < ApplicationController
     @member = @data.find { |item| item[:id] == params[:id] }
     redirect_to root_path unless @member
   end
+
+  def demo
+    
+  end
   private
 
   def set_data
